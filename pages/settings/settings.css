@@ -1,0 +1,13 @@
+button.settings {
+    margin: 1vh auto;
+    width: min(50vw, 225px);
+}
+
+.collapser {
+    width: 50%;
+    margin-top: 1vh;
+}
+
+.d-flex.justify-content.between {
+    width: 100%;
+}

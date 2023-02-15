@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Notepad | Focusinator</title>
+        <link href="../../bootstrap.min.css" rel="stylesheet">
+        <link href="../../focusinator.css" rel="stylesheet">
+        <!-- <link href="./notepad.css" rel="stylesheet"> -->
+        <style>
+            textarea:focus {
+                outline: none !important;
+                border:1px solid #7b0979;
+                box-shadow: 0 0 10px #ffddff;
+            }
+        </style>
+    </head>
+    <body class="justify-content-center text-center">
+        <div id="main-content" class="rounded m-5 p-2">
+            <h2 style="margin-bottom: 2.5vh; margin-top: 1.5vh">Notepad</h2>
+            <textarea id="notepad-text-area" style="width: 100%;" cols="30" rows="10"></textarea>
+        </div>
+
+        <script src="../../focusinator.js"></script>
+        <script src="./notepad2.js"></script>
+        <script src="./notepad.js"></script>
+    </body>
+</html>

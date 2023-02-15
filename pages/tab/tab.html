@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>New Tab</title>
+        <link href="../../bootstrap.min.css" rel="stylesheet">
+        <link href="../../focusinator.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="main-content" class="rounded m-5 p-2">
+            <div class="container">
+                <div class="row m-3">
+                    <div class="col-12 text-center d-flex justify-content-end">
+                        <a href="../settings/settings.html">Settings</a>
+                    </div>
+                </div>
+                <div class="row align-items-center m-3">
+                    <div class="col-md-12 text-center">
+                        <div class="justify-content-center text-center">
+                            <h1 style="padding-top: 2vh; margin: 2vh; font-size: 10vh">Focusinator</h1>
+                        </div>
+
+                        <input id="search" type="search" autocomplete="off" spellcheck="false" role="combobox"
+                            placeholder="Search Google or type a URL" aria-live="polite"
+                            style="width: 50%;" class="m-3"
+                        >
+                    </div>
+                </div>
+
+                <div class="row m-3 justify-content-center">
+                    <div class="col-sm-12 col-md-6 col-lg-4 mt-3">
+                        <h3 class="text-center" style="color: #ab39a9;">Points</h3>
+                        <div id="points-data" style="width: fit-content; margin: 0 auto;">
+                            <div>
+                                <p>You have <b id="all-points"></b> points.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-4 mt-3">
+                        <h3 class="text-center" style="color: #ab39a9;">Daily Tasks</h3>
+                        <div id="daily-tasks" style="width: fit-content; margin: 0 auto;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../../focusinator.js"></script>
+        <script src="./elements/dailyTasks.js"></script>
+        <script src="./tab.js"></script>
+    </body>
+</html>

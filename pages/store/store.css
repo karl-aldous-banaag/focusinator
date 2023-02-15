@@ -1,0 +1,8 @@
+button.use-item {
+    margin: 1vh auto;
+    width: max(8.5vw, 175px);
+}
+
+.reward-item {
+    margin: 1vh auto;
+}

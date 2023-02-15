@@ -1,0 +1,17 @@
+.add-task-btn {
+    width: max(100px, 10vw);
+}
+
+.add-task-input {
+    width: max(100px, 25vw);
+}
+
+.task-category-div {
+    width: fit-content;
+    margin-top: 4vh auto;
+}
+
+.task-category-items {
+    width: fit-content;
+    margin: 0 auto;
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Focusinator",
+  "version": "1.0.0",
+  "description": "A Witty + Litty Anti-Procrastination Tool",
+  "manifest_version": 3,
+  "author": "misterdossy",
+  "action":{
+    "default_popup": "pages/index/index.html",
+    "default_title": "Home | Focusinator"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "scripts/redirect.js",
+        "scripts/cuss.js",
+        "scripts/reward.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "chrome_url_overrides" : {
+    "newtab": "pages/tab/tab.html"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

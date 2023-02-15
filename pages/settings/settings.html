@@ -1,0 +1,209 @@
+<html>
+    <head>
+        <title>Settings | Focusinator</title>
+        <link href="../../bootstrap.min.css" rel="stylesheet">
+        <link href="../../focusinator.css" rel="stylesheet">
+        <link href="./settings.css" rel="stylesheet">
+        <style>
+            .form-switch .form-check-input:focus {
+                border-color: #7b0979;
+                box-shadow: 0 0 0 0 #7b0979;
+                background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(0,0,0,0.25)'/></svg>");
+            }
+
+            .form-switch .form-check-input:checked {
+                background-color: #ab39a9;
+                border-color: #ab39a9;
+                background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255,255,255,1.0)'/></svg>");
+            }
+        </style>
+    </head>
+    <body class="justify-content-center text-center">
+        <div id="main-content" class="rounded m-5 p-5">
+            <div class="justify-content-center text-center">
+                <h1>Settings</h1>
+            </div>
+
+            <h4 id="display-toggle" class="text-center" style="padding-top: 2vh;">
+                <a href="#">Display</a>
+            </h4>
+            <div id="display" class="justify-content-center text-start hstack gap-3"
+                style="width: fit-content; margin: 0 auto;" hidden
+            >
+                <div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox"
+                            id="dark-mode"
+                        >
+                        <label class="form-check-label" for="dark-mode">Dark Mode</label>
+                    </div>
+                </div>
+            </div>
+
+            <h4 id="menu-button-toggle" class="text-center" style="padding-top: 2vh;">
+                <a href="#">Menu Buttons</a>
+            </h4>
+            <div id="menu-button" class="justify-content-center text-start hstack gap-3"
+                style="width: fit-content; margin: 0 auto;" hidden
+            >
+                <div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input menu-input" type="checkbox"
+                            id="calendar-button" button-text="Calendar"
+                            page-url="pages/calendar/calendar.html"
+                            importance="2"
+                        >
+                        <label class="form-check-label" for="calendar-button">Calendar</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input menu-input" type="checkbox"
+                            id="checklist-button" button-text="Checklist"
+                            page-url="pages/checklist/checklist.html"
+                            importance="1"
+                        >
+                        <label class="form-check-label" for="checklist-button">Checklist</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input menu-input" type="checkbox"
+                            id="notepad-button" button-text="Notepad"
+                            page-url="pages/notepad/notepad.html"
+                            importance="3"
+                        >
+                        <label class="form-check-label" for="notepad-button">Notepad</label>
+                    </div>
+                </div>
+                <div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input menu-input" type="checkbox"
+                            id="pomodoro-technique-button" button-text="Pomodoro Timer"
+                            page-url="pages/pomodoro/pomodoro.html"
+                            importance="4"
+                        >
+                        <label class="form-check-label" for="pomodoro-technique-button">Pomodoro Timer</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input menu-input" type="checkbox"
+                            id="store-button" button-text="Store"
+                            page-url="pages/store/store.html"
+                            importance="5"
+                        >
+                        <label class="form-check-label" for="store-button">Store</label>
+                    </div>
+                </div>
+            </div>
+
+            <h4 id="restrictions-toggle" class="text-center" style="padding-top: 2vh;">
+                <a href="#">Restrictions</a>
+            </h4>
+            <div id="restrictions" class="justify-content-center text-center vstack p-2" hidden>
+                <div class="m-1 task-category-div">
+                    <button class="collapser" data-bs-toggle="collapse" href="#banned-websites">
+                        <div class="d-flex justify-content-between">
+                            <div class="mr-auto p-2">Banned Websites</div>
+                            <div href="#banned-websites" class="ml-auto p-2 ec-symbol">+</div>
+                        </div>
+                    </button>
+                    <div id="banned-websites" class="collapse">
+                        <div id="banned-websites-list" style="width: fit-content; margin: 0 auto;"></div>
+                        <div class="m-2 text-center">
+                            <button id="add-banned-website-btn">Add Website</button>
+                            <input id="add-banned-website-input" type="text">
+                        </div>
+                    </div>
+
+                    <button class="collapser" data-bs-toggle="collapse" href="#blacklist-words">
+                        <div class="d-flex justify-content-between">
+                            <div class="mr-auto p-2">Blacklist Words</div>
+                            <div href="#blacklist-words" class="ml-auto p-2 ec-symbol">+</div>
+                        </div>
+                    </button>
+                    <div id="blacklist-words" class="collapse">
+                        <div id="blacklist-words-list" style="width: fit-content; margin: 0 auto;"></div>
+                        <div class="m-2 text-center">
+                            <button id="add-blacklist-words-btn">Add Blacklist Word</button>
+                            <input id="add-blacklist-words-input" type="text">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <h4 id="tasks-toggle" class="text-center" style="padding-top: 2vh;">
+                <a href="#">Tasks</a>
+            </h4>
+            <div id="tasks" class="justify-content-center text-center vstack" hidden>
+                <div class="m-1 task-category-div">
+                    <button class="collapser" data-bs-toggle="collapse" href="#daily-tasks">
+                        <div class="d-flex justify-content-between">
+                            <div class="mr-auto p-2">Daily Tasks</div>
+                            <div href="#daily-tasks" class="ml-auto p-2 ec-symbol">+</div>
+                        </div>
+                    </button>
+                    <div id="daily-tasks" class="collapse">
+                        <div id="daily-tasks-list" style="width: fit-content; margin: 0 auto;"></div>
+                        <div class="m-2 text-center">
+                            <button id="add-daily-task-btn">Add Daily Task</button>
+                            <input id="add-daily-task-input" type="text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4 id="rewards-toggle" class="text-center" style="padding-top: 2vh;">
+                <a href="#">Rewards</a>
+            </h4>
+            <div id="rewards" class="justify-content-center text-center vstack" hidden>
+                <div class="m-1 task-category-div">
+                    <button class="collapser" data-bs-toggle="collapse" href="#rewards-list-div">
+                        <div class="d-flex justify-content-between">
+                            <div class="mr-auto p-2">Rewards</div>
+                            <div href="#rewards" class="ml-auto p-2 ec-symbol">+</div>
+                        </div>
+                    </button>
+                    <div id="rewards-list-div" class="collapse">
+                        <div id="rewards-list" style="width: fit-content; margin: 0 auto;">
+                        </div>
+                        <div class="m-2 text-center">
+                            <button id="add-reward-btn">Add Reward</button>
+                            <input id="add-reward-name-input" type="text"
+                                placeholder="Reward name"
+                            >
+                            <input id="add-reward-price-input" 
+                                style="width: 50px" type="number"
+                                title="Input the cost of the reward here."
+                                placeholder="15"
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4 id="reset-toggle" class="text-center" style="padding-top: 2vh;">
+                <a href="#">Reset</a>
+            </h4>
+            <div id="reset" class="justify-content-center text-center vstack" hidden>
+                <button class="settings" id="reset-menu-buttons">Reset Menu Buttons</button>
+                <button class="settings" id="reset-checklist">Reset Checklist</button>
+                <button class="settings" id="reset-points">Reset Points</button>
+                <button class="settings warn" id="reset-all">Reset All Settings</button>
+            </div>
+
+            <h4 id="storage-values-toggle" class="text-center" style="padding-top: 2vh;">
+                <a href="#">Storage Values</a>
+            </h4>
+            <div id="storage-values" hidden>
+                <pre id="storage-vals" style="width: 50vw;"></pre>
+            </div>
+        </div>
+
+        <script src="../../bootstrap.bundle.min.js"></script>
+        <script src="../../focusinator.js"></script>
+        <script src="./settings.js"></script>
+        <script src="./subsettings/display.js"></script>
+        <script src="./subsettings/menu.js"></script>
+        <script src="./subsettings/restrictions.js"></script>
+        <script src="./subsettings/tasks.js"></script>
+        <script src="./subsettings/rewards.js"></script>
+        <script src="./subsettings/reset.js"></script>
+    </body>
+</html>

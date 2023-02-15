@@ -1,0 +1,62 @@
+/* Styling for all documents */
+body {
+    background-color: #ffddff;
+}
+body.dark-mode {
+    /* background-color: #212226; */
+    background-color: #121212;
+    color: white;
+}
+
+#main-content {
+    background-color: white;
+}
+#main-content.dark-mode {
+    /* background-color: #303136; */
+    background-color: #1d1d1d;
+}
+
+h1, h2, h3, h4, h5, h6, a {
+    color: #ab39a9;
+}
+h2.dark-mode, h3.dark-mode,
+h4.dark-mode, h5.dark-mode, h6.dark-mode,
+a.dark-mode, button.dark-mode{
+    color: white;
+}
+
+button {
+    background-color: #ab39a9;
+    color: white;
+}
+
+button:hover {
+    background-color: #7b0979;
+}
+
+button.btn-close:hover {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+a:hover {
+    color: #7b0979;
+}
+
+button.buy {
+    margin: 1vh auto;
+    width: max(8.5vw, 175px);
+}
+
+button.warn {
+    background-color: white;
+    color: #ab39a9;
+}
+
+pre {
+    width: 50vw;
+    margin: 2vh auto;
+    padding: 2vw;
+    color: #ab39a9;
+    background-color: #1e1e1e;
+    text-align: left;
+}
